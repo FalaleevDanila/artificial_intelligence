@@ -1,0 +1,102 @@
+\hypertarget{class_bullet}{}\doxysection{Bullet Class Reference}
+\label{class_bullet}\index{Bullet@{Bullet}}
+
+
+Класс пуля, отвечает за создание пули, перемещение и взаимодействие её с другими объектами.  
+
+
+
+
+{\ttfamily \#include $<$bullet.\+h$>$}
+
+Inheritance diagram for Bullet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bullet}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bullet_a54cb2115a31b48156c0dbc0a0827ea7f}{Bullet}} (std\+::string attacker\+Name, Q\+PointF start, Q\+PointF end, Q\+Object $\ast$parent=nullptr)
+\item 
+std\+::string \mbox{\hyperlink{class_bullet_aacee3c12b0bf58a463d9d0f9a3c59cc3}{get\+Attacker\+Name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bullet_a3ae56d44a565f29f04f5ecc5d028d01c}{slot\+Timer\+Bullet}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Q\+RectF \mbox{\hyperlink{class_bullet_a8636206f82ad1a9984af245e282a9a96}{bounding\+Rect}} () const
+\item 
+void \mbox{\hyperlink{class_bullet_ab28bf9cd4ef9e50e9055048d7f9777d7}{paint}} (Q\+Painter $\ast$painter, const Q\+Style\+Option\+Graphics\+Item $\ast$option, Q\+Widget $\ast$widget)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bullet_af1ab0844f3236f9da438fa20ff471629}\label{class_bullet_af1ab0844f3236f9da438fa20ff471629}} 
+Q\+Timer $\ast$ {\bfseries timer\+Bullet}
+\item 
+\mbox{\Hypertarget{class_bullet_ab663a5c3693bedcbc7f971248673e9cb}\label{class_bullet_ab663a5c3693bedcbc7f971248673e9cb}} 
+std\+::string {\bfseries attacker\+Name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс пуля, отвечает за создание пули, перемещение и взаимодействие её с другими объектами. 
+
+Объект данного класс создается при вызове конструктора, а затем непрерывно перемещается по полю. Объект хранит информацию объекта его создавшего (\mbox{\hyperlink{class_npc}{Npc}} или \mbox{\hyperlink{class_player}{Player}}), эту информацию он передает объекту с которым он столкнулся (при наличии слота передачи). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bullet_a54cb2115a31b48156c0dbc0a0827ea7f}\label{class_bullet_a54cb2115a31b48156c0dbc0a0827ea7f}} 
+\index{Bullet@{Bullet}!Bullet@{Bullet}}
+\index{Bullet@{Bullet}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{Bullet()}{Bullet()}}
+{\footnotesize\ttfamily Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{std\+::string}]{attacker\+Name,  }\item[{Q\+PointF}]{start,  }\item[{Q\+PointF}]{end,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Создает пулю. 
+\begin{DoxyParams}{Parameters}
+{\em attacker\+Name} & -\/ запоминает имя создателя пули, точки start и end задают траекторию полёта пули. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bullet_a8636206f82ad1a9984af245e282a9a96}\label{class_bullet_a8636206f82ad1a9984af245e282a9a96}} 
+\index{Bullet@{Bullet}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily Q\+RectF Bullet\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция для обозначчения объекта на поверхности. \begin{DoxyReturn}{Returns}
+Область в которой лежит тело. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bullet_aacee3c12b0bf58a463d9d0f9a3c59cc3}\label{class_bullet_aacee3c12b0bf58a463d9d0f9a3c59cc3}} 
+\index{Bullet@{Bullet}!getAttackerName@{getAttackerName}}
+\index{getAttackerName@{getAttackerName}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{getAttackerName()}{getAttackerName()}}
+{\footnotesize\ttfamily std\+::string Bullet\+::get\+Attacker\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Передает имя объъекта его создавшего. \begin{DoxyReturn}{Returns}
+имя обекта его создавшего. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bullet_ab28bf9cd4ef9e50e9055048d7f9777d7}\label{class_bullet_ab28bf9cd4ef9e50e9055048d7f9777d7}} 
+\index{Bullet@{Bullet}!paint@{paint}}
+\index{paint@{paint}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Bullet\+::paint (\begin{DoxyParamCaption}\item[{Q\+Painter $\ast$}]{painter,  }\item[{const Q\+Style\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{Q\+Widget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция отрисовки пули. \mbox{\Hypertarget{class_bullet_a3ae56d44a565f29f04f5ecc5d028d01c}\label{class_bullet_a3ae56d44a565f29f04f5ecc5d028d01c}} 
+\index{Bullet@{Bullet}!slotTimerBullet@{slotTimerBullet}}
+\index{slotTimerBullet@{slotTimerBullet}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{slotTimerBullet}{slotTimerBullet}}
+{\footnotesize\ttfamily void Bullet\+::slot\+Timer\+Bullet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+Слот для обработки полёта пули. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+bullet.\+h\end{DoxyCompactItemize}

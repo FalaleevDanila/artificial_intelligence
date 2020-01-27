@@ -1,0 +1,92 @@
+\hypertarget{class_widget}{}\doxysection{Widget Class Reference}
+\label{class_widget}\index{Widget@{Widget}}
+
+
+Класс игрового поля, в нем будет происходить сама игра  
+
+
+
+
+{\ttfamily \#include $<$widget.\+h$>$}
+
+Inheritance diagram for Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_widget}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_widget_a19fc827fac35b2583fec589d2a4e7c55}{key\+Press\+Event}} (Q\+Key\+Event $\ast$event) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_widget_a6a3b4bd075dbee4c408338a8bb9c93ef}{exit}} ()
+\item 
+void \mbox{\hyperlink{class_widget_a4f0dd61150b9ee46b3ce2ca2ce185892}{player\+Go}} (char go)
+\item 
+void \mbox{\hyperlink{class_widget_ab06aca38d513ea25cf62163e3781c553}{repit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_widget_ace1aa23652eb4425355a81760b39fd37}{Widget}} (Q\+Widget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс игрового поля, в нем будет происходить сама игра 
+
+Данный класс отвечает за создание всех объектов (таких как \mbox{\hyperlink{class_player}{Player}}, \mbox{\hyperlink{class_npc}{Npc}} и Walls), за их взаимодействие, является посредником передачи информации между объектами типа \mbox{\hyperlink{class_man}{Man}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_widget_ace1aa23652eb4425355a81760b39fd37}\label{class_widget_ace1aa23652eb4425355a81760b39fd37}} 
+\index{Widget@{Widget}!Widget@{Widget}}
+\index{Widget@{Widget}!Widget@{Widget}}
+\doxysubsubsection{\texorpdfstring{Widget()}{Widget()}}
+{\footnotesize\ttfamily Widget\+::\+Widget (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Создает объект типа \mbox{\hyperlink{class_widget}{Widget}}, вызывает init(). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_widget_a6a3b4bd075dbee4c408338a8bb9c93ef}\label{class_widget_a6a3b4bd075dbee4c408338a8bb9c93ef}} 
+\index{Widget@{Widget}!exit@{exit}}
+\index{exit@{exit}!Widget@{Widget}}
+\doxysubsubsection{\texorpdfstring{exit}{exit}}
+{\footnotesize\ttfamily void Widget\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Сигнал закрытия окна. \mbox{\Hypertarget{class_widget_a19fc827fac35b2583fec589d2a4e7c55}\label{class_widget_a19fc827fac35b2583fec589d2a4e7c55}} 
+\index{Widget@{Widget}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!Widget@{Widget}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent}{keyPressEvent}}
+{\footnotesize\ttfamily void Widget\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Key\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [slot]}}
+
+Обрабатывает нажатие клавиш. 
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ нажатая клавиша. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_widget_a4f0dd61150b9ee46b3ce2ca2ce185892}\label{class_widget_a4f0dd61150b9ee46b3ce2ca2ce185892}} 
+\index{Widget@{Widget}!playerGo@{playerGo}}
+\index{playerGo@{playerGo}!Widget@{Widget}}
+\doxysubsubsection{\texorpdfstring{playerGo}{playerGo}}
+{\footnotesize\ttfamily void Widget\+::player\+Go (\begin{DoxyParamCaption}\item[{char}]{go }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Сигнал нажатой клавиши. 
+\begin{DoxyParams}{Parameters}
+{\em go} & -\/ нажатая клавиша. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_widget_ab06aca38d513ea25cf62163e3781c553}\label{class_widget_ab06aca38d513ea25cf62163e3781c553}} 
+\index{Widget@{Widget}!repit@{repit}}
+\index{repit@{repit}!Widget@{Widget}}
+\doxysubsubsection{\texorpdfstring{repit}{repit}}
+{\footnotesize\ttfamily void Widget\+::repit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Сигнал перезапуска ишры. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+widget.\+h\end{DoxyCompactItemize}

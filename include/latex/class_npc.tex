@@ -1,0 +1,405 @@
+\hypertarget{class_npc}{}\doxysection{Npc Class Reference}
+\label{class_npc}\index{Npc@{Npc}}
+
+
+Класс \mbox{\hyperlink{class_npc}{Npc}} с искусственным интеллектом  
+
+
+
+
+{\ttfamily \#include $<$npc.\+h$>$}
+
+Inheritance diagram for Npc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_npc}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_npc_a57b61c35b37cbbdc15de1e03faf2cef2}{go\+Left}} ()
+\item 
+void \mbox{\hyperlink{class_npc_aa93b7aac848a3930037f56a7ec1e65df}{go\+Right}} ()
+\item 
+void \mbox{\hyperlink{class_npc_a3dfe494feb511e3bd8863e87894c388a}{go\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_npc_aec10493df0ddd1bf37951121143a5db2}{go\+Down}} ()
+\item 
+void \mbox{\hyperlink{class_npc_aa08809d65c17e4b2ce3624b165dedd81}{slot\+Shot}} (bool shot)
+\item 
+void \mbox{\hyperlink{class_npc_a9a3c17a92bc3b8b2bc6c95e226d276da}{slot\+Game\+Timer}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_npc_ace014b5ff63a4d221acecbd6a15d0380}{signal\+Bullet}} (std\+::string name, Q\+PointF start, Q\+PointF end)
+\item 
+void \mbox{\hyperlink{class_npc_ae478fcaaa22be90d2a26d16d870fa76b}{end\+Of\+Life}} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_npc_aca0af40fc1c6cb7a85469a00a2024ea8}{Npc}} (Q\+Object $\ast$parent, std\+::string name, \mbox{\hyperlink{struct_way}{Way}} Npassive\+Way, bool agressive, int step, std\+::vector$<$ std\+::string $>$ enem\+Names, std\+::vector$<$ \mbox{\hyperlink{struct_wall}{Wall}} $>$ walls)
+\item 
+void \mbox{\hyperlink{class_npc_a9030d112a211049e3dc27bc86aa7ab72}{hit}} (int damage, std\+::string name)
+\item 
+std\+::string \mbox{\hyperlink{class_npc_a598b932dc97e2cbf50c1fe9fc85feba0}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{class_npc_a23fcc1953b303009f49ee0a6062d02ca}{set\+Attacker\+Name}} (\mbox{\hyperlink{struct_target}{Target}} attaker\+Name)
+\item 
+void \mbox{\hyperlink{class_npc_aa543c9a651e7910ad6f938847036a44b}{find\+Target}} ()
+\item 
+\mbox{\hyperlink{struct_target}{Target}} \mbox{\hyperlink{class_npc_a6d5132262e54fb3e39aed3a3ab325468}{get\+Value}} ()
+\item 
+void \mbox{\hyperlink{class_npc_a67949c66a8b2a0f28f3abb2c93c9d743}{attack\+Analize\+Function}} (std\+::vector$<$ \mbox{\hyperlink{struct_target}{Target}} $>$ targets)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_npc_a8d09fa0a46bac7f1c085645f03feec3e}{get\+Lenght}} (Q\+PointF first, Q\+PointF second)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_npc_ac464748795ebfa558c48c45052ec25d0}{slot\+Bullet\+Timer}} ()
+\item 
+void \mbox{\hyperlink{class_npc_a768e9888a31081dc33733920a831c03b}{focus\+Rotation\+Slot}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_npc_a17c2491234e1471ab21746701735554b}{paint}} (Q\+Painter $\ast$painter, const Q\+Style\+Option\+Graphics\+Item $\ast$option, Q\+Widget $\ast$widget)
+\item 
+Q\+RectF \mbox{\hyperlink{class_npc_aa2a5f14c1888494dcc33199613e1b1a5}{bounding\+Rect}} () const
+\item 
+Q\+Painter\+Path \mbox{\hyperlink{class_npc_a7e02f73d7cd19e50ba0689d2ca636046}{shape}} () const
+\item 
+void \mbox{\hyperlink{class_npc_a3952b8c4877a845ccaf9fbc9a77e8616}{agressive\+Function}} ()
+\item 
+void \mbox{\hyperlink{class_npc_a517beb2780aa913e703ba481b5ecf903}{passive\+Function}} ()
+\item 
+void \mbox{\hyperlink{class_npc_a137ae8c9358bcfadca80e370f966f516}{return\+On\+Passive\+Way}} ()
+\item 
+void \mbox{\hyperlink{class_npc_adc1091f7ea4e9ae94efa26e4f7154c7e}{check}} ()
+\item 
+void \mbox{\hyperlink{class_npc_a594917756b49832755e2801f243f00ea}{Go}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_npc_ac9aff8bcaeaa825e95afdc94c90a01fb}\label{class_npc_ac9aff8bcaeaa825e95afdc94c90a01fb}} 
+int {\bfseries step}
+\item 
+\mbox{\Hypertarget{class_npc_afc374a23ef18480a095da1b4b6ae5670}\label{class_npc_afc374a23ef18480a095da1b4b6ae5670}} 
+int {\bfseries sv}
+\item 
+\mbox{\Hypertarget{class_npc_a4136960f515b8318c602e8eb75b6163a}\label{class_npc_a4136960f515b8318c602e8eb75b6163a}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{class_npc_a224bbe32d616011ae46b25f58aedf5bb}\label{class_npc_a224bbe32d616011ae46b25f58aedf5bb}} 
+qreal {\bfseries angle}
+\item 
+\mbox{\Hypertarget{class_npc_a5e288d19be68bf669e0a3774331727e5}\label{class_npc_a5e288d19be68bf669e0a3774331727e5}} 
+\mbox{\hyperlink{struct_target}{Target}} {\bfseries target}
+\item 
+\mbox{\Hypertarget{class_npc_a66e4294ea43026b16d82182b1d71ba8e}\label{class_npc_a66e4294ea43026b16d82182b1d71ba8e}} 
+Q\+PointF {\bfseries bullet\+Target}
+\item 
+\mbox{\Hypertarget{class_npc_af79ed8cd77d284f3b685e0046e7cc867}\label{class_npc_af79ed8cd77d284f3b685e0046e7cc867}} 
+Q\+PointF {\bfseries player\+Coordinate}
+\item 
+\mbox{\Hypertarget{class_npc_ab379611a172fe1cd1ad0a02cb1baa0b0}\label{class_npc_ab379611a172fe1cd1ad0a02cb1baa0b0}} 
+bool {\bfseries shot}
+\item 
+\mbox{\Hypertarget{class_npc_a44281c88874f13254f0bf12b4f5c53e4}\label{class_npc_a44281c88874f13254f0bf12b4f5c53e4}} 
+bool {\bfseries agressive}
+\item 
+\mbox{\Hypertarget{class_npc_a4b915956d509378fe8306b4e344e57cf}\label{class_npc_a4b915956d509378fe8306b4e344e57cf}} 
+bool {\bfseries now\+Agressive}
+\item 
+\mbox{\Hypertarget{class_npc_a2f86af221c00f4aadf34df07f155b075}\label{class_npc_a2f86af221c00f4aadf34df07f155b075}} 
+bool {\bfseries on\+Way}
+\item 
+\mbox{\Hypertarget{class_npc_a3dd823892c461dfd2b33d9b562212db3}\label{class_npc_a3dd823892c461dfd2b33d9b562212db3}} 
+bool {\bfseries have\+Target}
+\item 
+\mbox{\Hypertarget{class_npc_af890936db0b5839e6264c19a5960d27d}\label{class_npc_af890936db0b5839e6264c19a5960d27d}} 
+bool {\bfseries last\+Target\+Point}
+\item 
+\mbox{\Hypertarget{class_npc_a628157bdd931858b15d4d9489fd8b0f4}\label{class_npc_a628157bdd931858b15d4d9489fd8b0f4}} 
+Q\+Timer $\ast$ {\bfseries bullet\+Timer}
+\item 
+\mbox{\Hypertarget{class_npc_a5748eb11b771a9853b666b6d3b9fc880}\label{class_npc_a5748eb11b771a9853b666b6d3b9fc880}} 
+Q\+Timer $\ast$ {\bfseries game\+Timer}
+\item 
+\mbox{\Hypertarget{class_npc_a74e755a962ff92df7b7dea7afd4f86ac}\label{class_npc_a74e755a962ff92df7b7dea7afd4f86ac}} 
+Q\+Timer $\ast$ {\bfseries check\+Player}
+\item 
+\mbox{\Hypertarget{class_npc_ac49c6b65a84201d136955a1058bee24b}\label{class_npc_ac49c6b65a84201d136955a1058bee24b}} 
+Q\+Timer $\ast$ {\bfseries check\+Timer}
+\item 
+\mbox{\Hypertarget{class_npc_aa7496775e3e0057529e8f560297d8505}\label{class_npc_aa7496775e3e0057529e8f560297d8505}} 
+Q\+Timer $\ast$ {\bfseries focus\+Rotation\+Timer}
+\item 
+\mbox{\Hypertarget{class_npc_a0b010dcfafbad65562b24459ebd535d4}\label{class_npc_a0b010dcfafbad65562b24459ebd535d4}} 
+char {\bfseries go}
+\item 
+\mbox{\Hypertarget{class_npc_ab1e9da2b0330d74bcf12b370d95ef330}\label{class_npc_ab1e9da2b0330d74bcf12b370d95ef330}} 
+qreal {\bfseries check\+Angle}
+\item 
+\mbox{\Hypertarget{class_npc_ac75079ce955bdac727ff5c84357a80cb}\label{class_npc_ac75079ce955bdac727ff5c84357a80cb}} 
+\mbox{\hyperlink{struct_way}{Way}} {\bfseries passive\+Way}
+\item 
+\mbox{\Hypertarget{class_npc_ae3c6befcb4e0b6c9d1bf7931d2d2438c}\label{class_npc_ae3c6befcb4e0b6c9d1bf7931d2d2438c}} 
+\mbox{\hyperlink{struct_way}{Way}} {\bfseries agressive\+Way}
+\item 
+\mbox{\Hypertarget{class_npc_a53328eb2bdbf51a01f6bf2969f4be822}\label{class_npc_a53328eb2bdbf51a01f6bf2969f4be822}} 
+double {\bfseries past\+Target\+Lenght}
+\item 
+\mbox{\Hypertarget{class_npc_a2efb0edbb93eaabe508b315c3a16308a}\label{class_npc_a2efb0edbb93eaabe508b315c3a16308a}} 
+double {\bfseries health}
+\item 
+\mbox{\Hypertarget{class_npc_a860bfdf7b76fe6213689b4e7e544c9fe}\label{class_npc_a860bfdf7b76fe6213689b4e7e544c9fe}} 
+double {\bfseries max\+Health}
+\item 
+\mbox{\Hypertarget{class_npc_a6f20ec5603780d3720e1e1c735510317}\label{class_npc_a6f20ec5603780d3720e1e1c735510317}} 
+int {\bfseries tm}
+\item 
+\mbox{\Hypertarget{class_npc_a60e36b4e69fc683b0845ef3b72796514}\label{class_npc_a60e36b4e69fc683b0845ef3b72796514}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_target}{Target}} $>$ {\bfseries enemies}
+\item 
+\mbox{\Hypertarget{class_npc_ab6b1b3e73e512170aad434c82d4baca2}\label{class_npc_ab6b1b3e73e512170aad434c82d4baca2}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries enemies\+Names}
+\item 
+\mbox{\Hypertarget{class_npc_ae3db7baa86ca6f9dd706c6d163cfd463}\label{class_npc_ae3db7baa86ca6f9dd706c6d163cfd463}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_wall}{Wall}} $>$ {\bfseries walls}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \mbox{\hyperlink{class_npc}{Npc}} с искусственным интеллектом 
+
+Объекты данного класса управляются с помощью искусственного интеллекла, сформированного на основе предоставленных при создании данных. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_npc_aca0af40fc1c6cb7a85469a00a2024ea8}\label{class_npc_aca0af40fc1c6cb7a85469a00a2024ea8}} 
+\index{Npc@{Npc}!Npc@{Npc}}
+\index{Npc@{Npc}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{Npc()}{Npc()}}
+{\footnotesize\ttfamily Npc\+::\+Npc (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent,  }\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{struct_way}{Way}}}]{Npassive\+Way,  }\item[{bool}]{agressive,  }\item[{int}]{step,  }\item[{std\+::vector$<$ std\+::string $>$}]{enem\+Names,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_wall}{Wall}} $>$}]{walls }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Создает объект типа \mbox{\hyperlink{class_npc}{Npc}}. 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ имя объекта, Npassive\+Way -\/ маршрут объекта, когда он находится в покое, \\
+\hline
+{\em agressive} & -\/ агрессивность оъекта, step -\/ размер шага, enem\+Names -\/ первоначальные враги, walls -\/ препятствия на игровой карте. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_npc_a3952b8c4877a845ccaf9fbc9a77e8616}\label{class_npc_a3952b8c4877a845ccaf9fbc9a77e8616}} 
+\index{Npc@{Npc}!agressiveFunction@{agressiveFunction}}
+\index{agressiveFunction@{agressiveFunction}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{agressiveFunction()}{agressiveFunction()}}
+{\footnotesize\ttfamily void Npc\+::agressive\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция, отвечающая за атаку на противников. \mbox{\Hypertarget{class_npc_a67949c66a8b2a0f28f3abb2c93c9d743}\label{class_npc_a67949c66a8b2a0f28f3abb2c93c9d743}} 
+\index{Npc@{Npc}!attackAnalizeFunction@{attackAnalizeFunction}}
+\index{attackAnalizeFunction@{attackAnalizeFunction}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{attackAnalizeFunction()}{attackAnalizeFunction()}}
+{\footnotesize\ttfamily void Npc\+::attack\+Analize\+Function (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_target}{Target}} $>$}]{targets }\end{DoxyParamCaption})}
+
+Функция анализа живых мишеней. 
+\begin{DoxyParams}{Parameters}
+{\em targets} & -\/ доступные мишени. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_npc_aa2a5f14c1888494dcc33199613e1b1a5}\label{class_npc_aa2a5f14c1888494dcc33199613e1b1a5}} 
+\index{Npc@{Npc}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily Q\+RectF Npc\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Преобразует прямоугольник из метода \mbox{\hyperlink{class_npc_a7e02f73d7cd19e50ba0689d2ca636046}{shape()}} в овал. \begin{DoxyReturn}{Returns}
+Овал, в область которого на игровом поле помещен объект. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_npc_adc1091f7ea4e9ae94efa26e4f7154c7e}\label{class_npc_adc1091f7ea4e9ae94efa26e4f7154c7e}} 
+\index{Npc@{Npc}!check@{check}}
+\index{check@{check}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily void Npc\+::check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция проверки на коллизии. \mbox{\Hypertarget{class_npc_ae478fcaaa22be90d2a26d16d870fa76b}\label{class_npc_ae478fcaaa22be90d2a26d16d870fa76b}} 
+\index{Npc@{Npc}!endOfLife@{endOfLife}}
+\index{endOfLife@{endOfLife}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{endOfLife}{endOfLife}}
+{\footnotesize\ttfamily void Npc\+::end\+Of\+Life (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Сигнал отвечающий за уведомленя игры о смерти объекта. \mbox{\Hypertarget{class_npc_aa543c9a651e7910ad6f938847036a44b}\label{class_npc_aa543c9a651e7910ad6f938847036a44b}} 
+\index{Npc@{Npc}!findTarget@{findTarget}}
+\index{findTarget@{findTarget}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{findTarget()}{findTarget()}}
+{\footnotesize\ttfamily void Npc\+::find\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+функция поиска цели, после того как она была потеряна. \mbox{\Hypertarget{class_npc_a768e9888a31081dc33733920a831c03b}\label{class_npc_a768e9888a31081dc33733920a831c03b}} 
+\index{Npc@{Npc}!focusRotationSlot@{focusRotationSlot}}
+\index{focusRotationSlot@{focusRotationSlot}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{focusRotationSlot}{focusRotationSlot}}
+{\footnotesize\ttfamily void Npc\+::focus\+Rotation\+Slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+Слот отслеживающий положение цели. \mbox{\Hypertarget{class_npc_a8d09fa0a46bac7f1c085645f03feec3e}\label{class_npc_a8d09fa0a46bac7f1c085645f03feec3e}} 
+\index{Npc@{Npc}!getLenght@{getLenght}}
+\index{getLenght@{getLenght}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{getLenght()}{getLenght()}}
+{\footnotesize\ttfamily static double Npc\+::get\+Lenght (\begin{DoxyParamCaption}\item[{Q\+PointF}]{first,  }\item[{Q\+PointF}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Вычисляет длину отрезка 
+\begin{DoxyParams}{Parameters}
+{\em first} & и second -\/ точки-\/концы отрезка, длину которого надо найти. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Длину отрезка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_npc_a598b932dc97e2cbf50c1fe9fc85feba0}\label{class_npc_a598b932dc97e2cbf50c1fe9fc85feba0}} 
+\index{Npc@{Npc}!getName@{getName}}
+\index{getName@{getName}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Npc\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Функция получения имени. \begin{DoxyReturn}{Returns}
+Имя данного объекта. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_npc_a6d5132262e54fb3e39aed3a3ab325468}\label{class_npc_a6d5132262e54fb3e39aed3a3ab325468}} 
+\index{Npc@{Npc}!getValue@{getValue}}
+\index{getValue@{getValue}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_target}{Target}} Npc\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Функция получения информации об объекте. \begin{DoxyReturn}{Returns}
+Имя объекта и его коодинаты. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_man_ab9ae3c1b253f92eb02cc17402dc82988}{Man}}.
+
+\mbox{\Hypertarget{class_npc_a594917756b49832755e2801f243f00ea}\label{class_npc_a594917756b49832755e2801f243f00ea}} 
+\index{Npc@{Npc}!Go@{Go}}
+\index{Go@{Go}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{Go()}{Go()}}
+{\footnotesize\ttfamily void Npc\+::\+Go (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция перемещения. \mbox{\Hypertarget{class_npc_aec10493df0ddd1bf37951121143a5db2}\label{class_npc_aec10493df0ddd1bf37951121143a5db2}} 
+\index{Npc@{Npc}!goDown@{goDown}}
+\index{goDown@{goDown}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{goDown}{goDown}}
+{\footnotesize\ttfamily void Npc\+::go\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот отвечающий за шаг назад. \mbox{\Hypertarget{class_npc_a57b61c35b37cbbdc15de1e03faf2cef2}\label{class_npc_a57b61c35b37cbbdc15de1e03faf2cef2}} 
+\index{Npc@{Npc}!goLeft@{goLeft}}
+\index{goLeft@{goLeft}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{goLeft}{goLeft}}
+{\footnotesize\ttfamily void Npc\+::go\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот отвечающий за шаг влево. \mbox{\Hypertarget{class_npc_aa93b7aac848a3930037f56a7ec1e65df}\label{class_npc_aa93b7aac848a3930037f56a7ec1e65df}} 
+\index{Npc@{Npc}!goRight@{goRight}}
+\index{goRight@{goRight}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{goRight}{goRight}}
+{\footnotesize\ttfamily void Npc\+::go\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот отвечающий за шаг вправо. \mbox{\Hypertarget{class_npc_a3dfe494feb511e3bd8863e87894c388a}\label{class_npc_a3dfe494feb511e3bd8863e87894c388a}} 
+\index{Npc@{Npc}!goUp@{goUp}}
+\index{goUp@{goUp}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{goUp}{goUp}}
+{\footnotesize\ttfamily void Npc\+::go\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот отвечающий за шаг вперед. \mbox{\Hypertarget{class_npc_a9030d112a211049e3dc27bc86aa7ab72}\label{class_npc_a9030d112a211049e3dc27bc86aa7ab72}} 
+\index{Npc@{Npc}!hit@{hit}}
+\index{hit@{hit}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily void Npc\+::hit (\begin{DoxyParamCaption}\item[{int}]{damage,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+Функция вызываемая, при попадании в этот объект. 
+\begin{DoxyParams}{Parameters}
+{\em neme} & -\/ имя выстрелившего в этот объект, damage -\/ урон, нанесенный пулей. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_npc_a17c2491234e1471ab21746701735554b}\label{class_npc_a17c2491234e1471ab21746701735554b}} 
+\index{Npc@{Npc}!paint@{paint}}
+\index{paint@{paint}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Npc\+::paint (\begin{DoxyParamCaption}\item[{Q\+Painter $\ast$}]{painter,  }\item[{const Q\+Style\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{Q\+Widget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Отрисовка Npc-\/объекта. \mbox{\Hypertarget{class_npc_a517beb2780aa913e703ba481b5ecf903}\label{class_npc_a517beb2780aa913e703ba481b5ecf903}} 
+\index{Npc@{Npc}!passiveFunction@{passiveFunction}}
+\index{passiveFunction@{passiveFunction}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{passiveFunction()}{passiveFunction()}}
+{\footnotesize\ttfamily void Npc\+::passive\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция, отвечающая за передвижение объекта в состоянии покоя по заданному маршрута. \mbox{\Hypertarget{class_npc_a137ae8c9358bcfadca80e370f966f516}\label{class_npc_a137ae8c9358bcfadca80e370f966f516}} 
+\index{Npc@{Npc}!returnOnPassiveWay@{returnOnPassiveWay}}
+\index{returnOnPassiveWay@{returnOnPassiveWay}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{returnOnPassiveWay()}{returnOnPassiveWay()}}
+{\footnotesize\ttfamily void Npc\+::return\+On\+Passive\+Way (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция, отвечающая за передвижение объекта в состоянии покоя до заданного маршрута (если он не доступен из-\/за коллизий). \mbox{\Hypertarget{class_npc_a23fcc1953b303009f49ee0a6062d02ca}\label{class_npc_a23fcc1953b303009f49ee0a6062d02ca}} 
+\index{Npc@{Npc}!setAttackerName@{setAttackerName}}
+\index{setAttackerName@{setAttackerName}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{setAttackerName()}{setAttackerName()}}
+{\footnotesize\ttfamily void Npc\+::set\+Attacker\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_target}{Target}}}]{attaker\+Name }\end{DoxyParamCaption})}
+
+Функция запоминания нового врага. 
+\begin{DoxyParams}{Parameters}
+{\em attaker\+Name} & -\/ имя нападавшего. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_npc_a7e02f73d7cd19e50ba0689d2ca636046}\label{class_npc_a7e02f73d7cd19e50ba0689d2ca636046}} 
+\index{Npc@{Npc}!shape@{shape}}
+\index{shape@{shape}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily Q\+Painter\+Path Npc\+::shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция вычисляет диапазон, в котором лежит объект \begin{DoxyReturn}{Returns}
+Прямоугольник, в область которого на игровом поле помещен объект. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_npc_ace014b5ff63a4d221acecbd6a15d0380}\label{class_npc_ace014b5ff63a4d221acecbd6a15d0380}} 
+\index{Npc@{Npc}!signalBullet@{signalBullet}}
+\index{signalBullet@{signalBullet}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{signalBullet}{signalBullet}}
+{\footnotesize\ttfamily void Npc\+::signal\+Bullet (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{Q\+PointF}]{start,  }\item[{Q\+PointF}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Сигнал отвечающий за создание пули. 
+\begin{DoxyParams}{Parameters}
+{\em neme} & -\/ имя объекта, точки start и end задают траектор полета пули. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_npc_ac464748795ebfa558c48c45052ec25d0}\label{class_npc_ac464748795ebfa558c48c45052ec25d0}} 
+\index{Npc@{Npc}!slotBulletTimer@{slotBulletTimer}}
+\index{slotBulletTimer@{slotBulletTimer}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{slotBulletTimer}{slotBulletTimer}}
+{\footnotesize\ttfamily void Npc\+::slot\+Bullet\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+Слот проверки пули. \mbox{\Hypertarget{class_npc_a9a3c17a92bc3b8b2bc6c95e226d276da}\label{class_npc_a9a3c17a92bc3b8b2bc6c95e226d276da}} 
+\index{Npc@{Npc}!slotGameTimer@{slotGameTimer}}
+\index{slotGameTimer@{slotGameTimer}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{slotGameTimer}{slotGameTimer}}
+{\footnotesize\ttfamily void Npc\+::slot\+Game\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот обработки игры. \mbox{\Hypertarget{class_npc_aa08809d65c17e4b2ce3624b165dedd81}\label{class_npc_aa08809d65c17e4b2ce3624b165dedd81}} 
+\index{Npc@{Npc}!slotShot@{slotShot}}
+\index{slotShot@{slotShot}!Npc@{Npc}}
+\doxysubsubsection{\texorpdfstring{slotShot}{slotShot}}
+{\footnotesize\ttfamily void Npc\+::slot\+Shot (\begin{DoxyParamCaption}\item[{bool}]{shot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот отвечающий за шаг стрельбу. 
+\begin{DoxyParams}{Parameters}
+{\em Переменная} & состояния стрельбы. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+npc.\+h\end{DoxyCompactItemize}

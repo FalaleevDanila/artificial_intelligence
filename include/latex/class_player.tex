@@ -1,0 +1,144 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+Класс игрока, объектом этого класса вы будете управлять  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_ab464b89325be4132fd04662f7baaa352}{Go}} (char go)
+\item 
+void \mbox{\hyperlink{class_player_a9e3b58071bab9750c9880257ce6e72d7}{slot\+Target}} (Q\+PointF point)
+\item 
+void \mbox{\hyperlink{class_player_a1898305702143858b18c480ca756a634}{slot\+Shot}} (bool shot)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_a8c22c0bb8b1191d470f920a0c0350935}{signal\+Bullet}} (std\+::string get\+Name, Q\+PointF start, Q\+PointF end)
+\item 
+void \mbox{\hyperlink{class_player_a99768a52c449aca7a006f733d9cb1d51}{end\+Of\+Life}} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_ae899740c4bc0ad96e374c368f91470d4}{Player}} (std\+::vector$<$ \mbox{\hyperlink{struct_wall}{Wall}} $>$ walls, double health, Q\+Object $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_player_af5c84edf5f974eac27d93b6c1f6711a2}{hit}} (int damage)
+\item 
+\mbox{\hyperlink{struct_target}{Target}} \mbox{\hyperlink{class_player_af123e013e8036c8543bbbd1eeed4ab0c}{get\+Value}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_a02d1d7a8488bc2ed3a9b317dcf17b39c}{paint}} (Q\+Painter $\ast$painter, const Q\+Style\+Option\+Graphics\+Item $\ast$option, Q\+Widget $\ast$widget)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс игрока, объектом этого класса вы будете управлять 
+
+Предосталяет пользователю участвовать в процессе тестирован ИИ \mbox{\hyperlink{class_npc}{Npc}}, перемещаясь по полю, становясь при желании целью для атаки. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_ae899740c4bc0ad96e374c368f91470d4}\label{class_player_ae899740c4bc0ad96e374c368f91470d4}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_wall}{Wall}} $>$}]{walls,  }\item[{double}]{health,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Создает объект типа \mbox{\hyperlink{class_player}{Player}}. 
+\begin{DoxyParams}{Parameters}
+{\em health} & -\/ максимальное здоровье, walls -\/ препятствия на игровой карте. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_a99768a52c449aca7a006f733d9cb1d51}\label{class_player_a99768a52c449aca7a006f733d9cb1d51}} 
+\index{Player@{Player}!endOfLife@{endOfLife}}
+\index{endOfLife@{endOfLife}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{endOfLife}{endOfLife}}
+{\footnotesize\ttfamily void Player\+::end\+Of\+Life (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Сигнал отвечающий за уведомленя игры о смерти объекта. \mbox{\Hypertarget{class_player_af123e013e8036c8543bbbd1eeed4ab0c}\label{class_player_af123e013e8036c8543bbbd1eeed4ab0c}} 
+\index{Player@{Player}!getValue@{getValue}}
+\index{getValue@{getValue}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_target}{Target}} Player\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Функция получения информации об объекте. \begin{DoxyReturn}{Returns}
+Имя объекта и его коодинаты. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_man_ab9ae3c1b253f92eb02cc17402dc82988}{Man}}.
+
+\mbox{\Hypertarget{class_player_ab464b89325be4132fd04662f7baaa352}\label{class_player_ab464b89325be4132fd04662f7baaa352}} 
+\index{Player@{Player}!Go@{Go}}
+\index{Go@{Go}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Go}{Go}}
+{\footnotesize\ttfamily void Player\+::\+Go (\begin{DoxyParamCaption}\item[{char}]{go }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот перемещения игрка по полю. 
+\begin{DoxyParams}{Parameters}
+{\em go} & -\/ нажатая клавиша. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_af5c84edf5f974eac27d93b6c1f6711a2}\label{class_player_af5c84edf5f974eac27d93b6c1f6711a2}} 
+\index{Player@{Player}!hit@{hit}}
+\index{hit@{hit}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily void Player\+::hit (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+Функция вызываемая, при попадании в этот объект. 
+\begin{DoxyParams}{Parameters}
+{\em neme} & -\/ имя выстрелившего в этот объект, damage -\/ урон, нанесенный пулей. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_a02d1d7a8488bc2ed3a9b317dcf17b39c}\label{class_player_a02d1d7a8488bc2ed3a9b317dcf17b39c}} 
+\index{Player@{Player}!paint@{paint}}
+\index{paint@{paint}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Player\+::paint (\begin{DoxyParamCaption}\item[{Q\+Painter $\ast$}]{painter,  }\item[{const Q\+Style\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{Q\+Widget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Отрисовка Playerc-\/объекта. \mbox{\Hypertarget{class_player_a8c22c0bb8b1191d470f920a0c0350935}\label{class_player_a8c22c0bb8b1191d470f920a0c0350935}} 
+\index{Player@{Player}!signalBullet@{signalBullet}}
+\index{signalBullet@{signalBullet}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{signalBullet}{signalBullet}}
+{\footnotesize\ttfamily void Player\+::signal\+Bullet (\begin{DoxyParamCaption}\item[{std\+::string}]{get\+Name,  }\item[{Q\+PointF}]{start,  }\item[{Q\+PointF}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Сигнал отвечающий за создание пули. 
+\begin{DoxyParams}{Parameters}
+{\em neme} & -\/ имя объекта, точки start и end задают траектор полета пули. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_a1898305702143858b18c480ca756a634}\label{class_player_a1898305702143858b18c480ca756a634}} 
+\index{Player@{Player}!slotShot@{slotShot}}
+\index{slotShot@{slotShot}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{slotShot}{slotShot}}
+{\footnotesize\ttfamily void Player\+::slot\+Shot (\begin{DoxyParamCaption}\item[{bool}]{shot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот проверки состояния стрельбы. \mbox{\Hypertarget{class_player_a9e3b58071bab9750c9880257ce6e72d7}\label{class_player_a9e3b58071bab9750c9880257ce6e72d7}} 
+\index{Player@{Player}!slotTarget@{slotTarget}}
+\index{slotTarget@{slotTarget}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{slotTarget}{slotTarget}}
+{\footnotesize\ttfamily void Player\+::slot\+Target (\begin{DoxyParamCaption}\item[{Q\+PointF}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Слот проверки пули. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+player.\+h\end{DoxyCompactItemize}

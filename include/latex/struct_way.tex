@@ -1,0 +1,74 @@
+\hypertarget{struct_way}{}\doxysection{Way Struct Reference}
+\label{struct_way}\index{Way@{Way}}
+
+
+Структура пути, отвечающая за цель у ИИ \mbox{\hyperlink{class_npc}{Npc}}.  
+
+
+
+
+{\ttfamily \#include $<$way.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_way_a8cdbd17f2926a39cdae6fb6abec87110}{Way}} (bool inf, bool cycle, std\+::vector$<$ Q\+PointF $>$ way)
+\item 
+void \mbox{\hyperlink{struct_way_a84aedbb73a5def61d52fee07cdc86c4e}{next}} ()
+\item 
+void \mbox{\hyperlink{struct_way_aef1c27d44c7d54d63f3653d097d792d8}{way\+Reverse}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_way_ae6eb7233fd78895dc9e481e1aa2e8cf7}\label{struct_way_ae6eb7233fd78895dc9e481e1aa2e8cf7}} 
+bool {\bfseries inf}
+\item 
+\mbox{\Hypertarget{struct_way_aa87c800533eb419466db54e63ddabf64}\label{struct_way_aa87c800533eb419466db54e63ddabf64}} 
+bool {\bfseries cycle}
+\item 
+\mbox{\Hypertarget{struct_way_affb9b42fd14106ad8ae15f696deaa605}\label{struct_way_affb9b42fd14106ad8ae15f696deaa605}} 
+std\+::vector$<$ Q\+PointF $>$ {\bfseries way}
+\item 
+\mbox{\Hypertarget{struct_way_a27dbf0e950dcf570065ef8c1a221eb04}\label{struct_way_a27dbf0e950dcf570065ef8c1a221eb04}} 
+std\+::vector$<$ Q\+PointF $>$ {\bfseries copy}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Структура пути, отвечающая за цель у ИИ \mbox{\hyperlink{class_npc}{Npc}}. 
+
+Осуществляет функционал перемещения по циклу, от первой точки к последней и наоборот или простого строяния. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_way_a8cdbd17f2926a39cdae6fb6abec87110}\label{struct_way_a8cdbd17f2926a39cdae6fb6abec87110}} 
+\index{Way@{Way}!Way@{Way}}
+\index{Way@{Way}!Way@{Way}}
+\doxysubsubsection{\texorpdfstring{Way()}{Way()}}
+{\footnotesize\ttfamily Way\+::\+Way (\begin{DoxyParamCaption}\item[{bool}]{inf,  }\item[{bool}]{cycle,  }\item[{std\+::vector$<$ Q\+PointF $>$}]{way }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Создает объект типа \mbox{\hyperlink{struct_way}{Way}}. 
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ параметр состояния маршрута -\/ бесконечность, cycle -\/ параметр состояния маршрута -\/ цикл, way -\/ маршрут по которому идёт передвижение. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_way_a84aedbb73a5def61d52fee07cdc86c4e}\label{struct_way_a84aedbb73a5def61d52fee07cdc86c4e}} 
+\index{Way@{Way}!next@{next}}
+\index{next@{next}!Way@{Way}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily void Way\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Преходит к следующей точке маршрута. \mbox{\Hypertarget{struct_way_aef1c27d44c7d54d63f3653d097d792d8}\label{struct_way_aef1c27d44c7d54d63f3653d097d792d8}} 
+\index{Way@{Way}!wayReverse@{wayReverse}}
+\index{wayReverse@{wayReverse}!Way@{Way}}
+\doxysubsubsection{\texorpdfstring{wayReverse()}{wayReverse()}}
+{\footnotesize\ttfamily void Way\+::way\+Reverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Перезаписывает координаты точек маршрута в обратном направлении. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+way.\+h\end{DoxyCompactItemize}
