@@ -17,7 +17,7 @@ struct Target
 
 
 public:
-    Target(){}
+    Target() = default;
     /*!
     Создает объект типа Target.
     \param position - координаты цели, name - имя цели.
