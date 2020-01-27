@@ -51,7 +51,7 @@ public:
                 if(inf == true){
 
                     wayReverse();
-                    auto iter2=copy.cbegin();
+                    auto iter2=copy.begin();
                     copy.erase(iter2);
                 }
                 else if(cycle == true){
@@ -60,13 +60,13 @@ public:
                 }
                 else {
 
-                    auto iter = copy.cbegin();
+                    auto iter = copy.begin();
                     copy.erase(iter);
                 }
             }
             else {
 
-                auto iter = copy.cbegin();
+                auto iter = copy.begin();
                 copy.erase(iter);
             }
         }
