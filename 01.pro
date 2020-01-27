@@ -5,8 +5,6 @@
 #-------------------------------------------------
 
 QT       += core gui
-QT       += testlib
-QT       += gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -34,7 +32,6 @@ SOURCES += \
         sources/mousecontrol.cpp \
         sources/npc.cpp \
         sources/player.cpp \
-        sources/test_class.cpp \
         sources/widget.cpp
 
 HEADERS += \
@@ -46,7 +43,6 @@ HEADERS += \
         include/npc.h \
         include/player.h \
         include/target.h \
-        include/test_class.h \
         include/wall.h \
         include/way.h \
         include/widget.h
