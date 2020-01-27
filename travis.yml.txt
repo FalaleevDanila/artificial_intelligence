@@ -1,25 +1,32 @@
 language: cpp
 
-services:
-  - docker
+include:
+  - os: linux
+    sudo: true
+    compiler: gcc
+    addons:
+      apt:
+        sources:
+          - ubuntu-toolchain-r-test
+        packages:
+          - gcc-8
+          - g++-8
+          - qtmultimedia5-dev
+          - qtmobility-dev
+          - qtdeclarative5-dev
+          - qtbase5-dev
 
-matrix:
-  include:
-    - os: linux
-      dist: xenial
-      sudo: true
-      compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-8
-            - g++-8
-            - qtdeclarative5-dev
+
+
+before_install:
+  - sudo add-apt-repository ppa:beineri/opt-qt58-trusty -y
+  - sudo apt-get update
+
+install:
+  - sudo apt-get install qt58base qt58svg qt58charts-no-lgpl qt58xmlpatterns qt58multimedia libpulse-dev
+  - source /opt/qt58/bin/qt58-env.sh
+
 
 script:
-  - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
-  - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
-  - mkdir -p .build
-  - cd .build
+  - /opt/qt58/bin/qmake PREFIX=/usr
+  - make
