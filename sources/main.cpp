@@ -9,9 +9,9 @@ int main(int argc, char *argv[])
 {
 
     //======
-    freopen("testing.log", "w", stdout);
+    //freopen("testing.log", "w", stdout);
     QApplication a(argc, argv);
-    QTest::qExec(new Test_class, argc, argv);
+    //QTest::qExec(new Test_class, argc, argv);
     //======
     //QApplication a(argc, argv);
     MainWindow w;
