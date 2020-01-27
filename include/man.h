@@ -14,7 +14,9 @@ public:
     Функция получения информации об объекте.
     \return Имя объекта и его коодинаты.
     */
-    virtual Target getValue(){}
+    virtual Target getValue(){
+        return Target();
+    }
     virtual ~Man(){}
 
 };
