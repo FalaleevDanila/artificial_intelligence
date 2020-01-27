@@ -17,12 +17,9 @@ matrix:
             - gcc-8
             - g++-8
             - qtdeclarative5-dev
-            - cmake
 
 script:
   - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
   - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
   - mkdir -p .build
   - cd .build
-  - cmake .. -DBUILD_TESTS=On
-  - cmake --build .
